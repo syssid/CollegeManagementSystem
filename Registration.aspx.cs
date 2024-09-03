@@ -17,7 +17,7 @@ namespace CollegeManagementSystem
 
 		protected void btnRegister_Click(object sender, EventArgs e)
 		{
-			string username = txtUsername.Text.Trim();
+			/*string username = txtUsername.Text.Trim();
 			string phone = txtPhone.Text.Trim();
 			string password = txtPassword.Text.Trim();
 			SqlParameter[] param = new SqlParameter[]
@@ -32,7 +32,7 @@ namespace CollegeManagementSystem
 			if (dt.Rows.Count> 0)
 			{
 				Response.Redirect("Login.aspx");
-			}
+			}*/
 			
 		}
 	}

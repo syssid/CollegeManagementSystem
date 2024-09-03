@@ -67,15 +67,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CDN\CSS\bootstrap.css" />
-    <Content Include="CDN\JS\bootstrap.js" />
-    <Content Include="CDN\JS\jQuery.js" />
+    <Content Include="Contents\CDN\CSS\bootstrap.css" />
+    <Content Include="Contents\CDN\JS\bootstrap.js" />
+    <Content Include="Contents\CDN\JS\jQuery.js" />
+    <Content Include="Contents\CDN\JS\SweetAlert.js" />
     <Content Include="Contents\CSS\Login.css" />
+    <Content Include="Contents\JS\Registration.js" />
     <Content Include="Dashboard.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
     <Content Include="Registration.aspx" />
     <Content Include="Web.config" />
+    <Content Include="WebMethods\WebRegistration.asmx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dashboard.aspx.cs">
@@ -96,11 +99,11 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MasterPage\Layout.Master.cs">
+    <Compile Include="Contents\MasterPage\Layout.Master.cs">
       <DependentUpon>Layout.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MasterPage\Layout.Master.designer.cs">
+    <Compile Include="Contents\MasterPage\Layout.Master.designer.cs">
       <DependentUpon>Layout.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -111,9 +114,13 @@
     <Compile Include="Registration.aspx.designer.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WebMethods\WebRegistration.asmx.cs">
+      <DependentUpon>WebRegistration.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MasterPage\Layout.Master" />
+    <Content Include="Contents\MasterPage\Layout.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -124,12 +131,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Contents\JS\" />
-    <Folder Include="Documents\" />
+    <Folder Include="Contents\Documents\" />
+    <Folder Include="Contents\Pictures\CMS\" />
     <Folder Include="Handlers\" />
-    <Folder Include="Models\" />
-    <Folder Include="Pictures\CMS\" />
-    <Folder Include="WebMethods\" />
+    <Folder Include="WebModules\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

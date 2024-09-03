@@ -13,30 +13,29 @@ namespace CollegeManagementSystem
 {
 	public partial class Login : System.Web.UI.Page
 	{
-		DBConnection obj = new DBConnection();
+		DBConnection objLogin = new DBConnection();
 		protected void btnLogin_Click(object sender, EventArgs e)
 		{
-		//	string username = txtUsername.Text.Trim();
-		//	string password = txtPassword.Text.Trim();
+			string Email = txtEmail.Text.Trim();
+			string Password = txtPassword.Text.Trim();
 
-			///*SqlParameter[] param = new SqlParameter[]
-			//{
-			//new SqlParameter("@Phone",""),
-			//new SqlParameter("@Password",password),
-			//new SqlParameter("@CreatedBy",username),
-			//new SqlParameter("@Operation", 2)
-			//};
+			byte[] passwordBytes = System.Text.Encoding.UTF8.GetBytes(Password);
+			string base64Password = Convert.ToBase64String(passwordBytes);
 
-			//DataTable dt = obj.ExecSPReader("csm_login.UserManage", param);
-			//if (dt.Rows.Count > 0)
-			//{
-			//	Session["Username"] = username;
-			//	Response.Redirect("Dashboard.aspx");
-			//}
-			//else
-			//{
-			//	lblMessage.Text = "Invalid username or password.";
-			//}*/
+			SqlParameter[] param = new SqlParameter[]
+			{
+			new SqlParameter("@EmailID",Email),
+			new SqlParameter("@Password",base64Password)
+			};
+
+			DataTable dt = objLogin.ExecSPReader("CMS_SP_USER_LOGIN", param);
+			if (dt.Rows.Count > 0)
+			{
+				Session["Username"] = Email;
+				Response.Redirect("Dashboard.aspx");
+			}
+			else
+				lblMessage.Text = "Invalid username or password.";
 		}
 	}
 }
