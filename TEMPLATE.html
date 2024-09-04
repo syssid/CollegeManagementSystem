@@ -1,34 +1,45 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Layout.master.cs" Inherits="CollegeManagementSystem.MasterPage.Layout" %>
-
 <!DOCTYPE html>
+<html lang="en">
 
-<html>
-<head runat="server">
-    <title></title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <!-- Bootstrap Core CSS -->
-    <link href="../../css/bootstrap.min.css" rel="stylesheet">
-    <!-- MetisMenu CSS -->
-    <link href="../../css/metisMenu.min.css" rel="stylesheet">
-    <!-- Timeline CSS -->
-    <link href="../../css/timeline.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="../../css/startmin.css" rel="stylesheet">
-    <!-- Morris Charts CSS -->
-    <link href="../../css/morris.css" rel="stylesheet">
-    <!-- Custom Fonts -->
-    <link href="../../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
 
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div id="wrapper">
+        <title>Startmin - Bootstrap Admin Theme</title>
+
+        <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- MetisMenu CSS -->
+        <link href="css/metisMenu.min.css" rel="stylesheet">
+
+        <!-- Timeline CSS -->
+        <link href="css/timeline.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="css/startmin.css" rel="stylesheet">
+
+        <!-- Morris Charts CSS -->
+        <link href="css/morris.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        
+<div id="wrapper">
 
             <!-- Top Navigation -->
             <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -45,22 +56,21 @@
 
                 <!-- Left Menu -->
                 <ul class="nav navbar-nav navbar-left navbar-top-links">
-                    <li><a href="#"><i class="fa fa-home fa-fw"></i>Website</a></li>
+                    <li><a href="#"><i class="fa fa-home fa-fw"></i> Website</a></li>
                 </ul>
 
                 <!-- Right Menu -->
                 <ul class="nav navbar-right navbar-top-links">
                     <li class="dropdown navbar-inverse">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="../../#">
-                            <i class="fa fa-bell fa-fw"></i><b class="caret"></b>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-bell fa-fw"></i> <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu dropdown-alerts">
                             <li>
                                 <a href="#">
                                     <div>
-                                        <i class="fa fa-comment fa-fw"></i>New Comment
-                                   
-                                            <span class="pull-right text-muted small">4 minutes ago</span>
+                                        <i class="fa fa-comment fa-fw"></i> New Comment
+                                        <span class="pull-right text-muted small">4 minutes ago</span>
                                     </div>
                                 </a>
                             </li>
@@ -75,20 +85,18 @@
                     </li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                            <i class="fa fa-user fa-fw"></i>secondtruth <b class="caret"></b>
+                            <i class="fa fa-user fa-fw"></i> secondtruth <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu dropdown-user">
                             <li>
-                                <a href="#"><i class="fa fa-user fa-fw"></i>User Profile</a>
+                                <a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
                             </li>
                             <li>
-                                <a href="#"><i class="fa fa-gear fa-fw"></i>Settings</a>
+                                <a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                             </li>
                             <li class="divider"></li>
                             <li>
-                                <a href="javascript:void(0);" onclick="document.getElementById('<%= btnLogout.ClientID %>').click();">
-                                    <i class="fa fa-sign-out fa-fw"></i>Logout
-                                        </a>
+                                <a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                             </li>
                         </ul>
                     </li>
@@ -111,22 +119,10 @@
                             </div>
                         </li>
                         <li>
-                            <a href="../../WebModules/Dashboard/Dashboard.aspx" class="active"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
+                            <a href="#" class="active"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-files-o fa-fw"></i>Forms<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="../../WebModules/Forms/StudentForm.aspx">Student Form</a>
-                                </li>
-                                <li>
-                                    <a href="login.html">Login Page</a>
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-sitemap fa-fw"></i>Multi-Level Dropdown<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="#">Second Level Item</a>
@@ -142,6 +138,7 @@
                             </ul>
                         </li>
                     </ul>
+
                 </div>
             </aside>
 
@@ -156,28 +153,23 @@
                     </div>
 
                     <!-- ... Your content goes here ... -->
-                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
 
-                    </asp:ContentPlaceHolder>
                 </div>
             </div>
 
         </div>
 
         <!-- jQuery -->
-        <script src="../../js/jquery.min.js"></script>
+        <script src="js/jquery.min.js"></script>
 
         <!-- Bootstrap Core JavaScript -->
-        <script src="../../js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
 
         <!-- Metis Menu Plugin JavaScript -->
-        <script src="../../js/metisMenu.min.js"></script>
+        <script src="js/metisMenu.min.js"></script>
 
         <!-- Custom Theme JavaScript -->
-        <script src="../../js/startmin.js"></script>
-        <div>
-            <asp:Button ID="btnLogout" runat="server" Text="Logout" OnClick="btnLogout_Click" Style="display: none;" />
-        </div>
-    </form>
-</body>
+        <script src="js/startmin.js"></script>
+    </body>
+
 </html>

@@ -32,7 +32,7 @@ namespace CollegeManagementSystem
 			if (dt.Rows.Count > 0)
 			{
 				Session["Username"] = Email;
-				Response.Redirect("Dashboard.aspx");
+				Response.Redirect("WebModules/Dashboard/Dashboard.aspx");
 			}
 			else
 				lblMessage.Text = "Invalid username or password.";

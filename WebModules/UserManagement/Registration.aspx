@@ -15,7 +15,7 @@
     <style>
         #overlay {
             position: fixed;
-            top: 0;
+            top: 0; 
             left: 0;
             z-index: 100;
             width: 100%;
@@ -25,7 +25,7 @@
 
         .cv-spinner {
             height: 100%;
-            display: flex;
+            display: flex;  
             justify-content: center;
             align-items: center;
         }

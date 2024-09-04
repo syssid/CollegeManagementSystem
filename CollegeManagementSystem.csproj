@@ -73,19 +73,75 @@
     <Content Include="Contents\CDN\JS\SweetAlert.js" />
     <Content Include="Contents\CSS\Login.css" />
     <Content Include="Contents\JS\Registration.js" />
-    <Content Include="Dashboard.aspx" />
+    <Content Include="css\bootstrap-social.css" />
+    <Content Include="css\bootstrap-theme.min.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\dataTables\dataTables.bootstrap.css" />
+    <Content Include="css\dataTables\dataTables.responsive.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\metisMenu.min.css" />
+    <Content Include="css\morris.css" />
+    <Content Include="css\startmin.css" />
+    <Content Include="css\timeline.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="index.html" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\dataTables\dataTables.bootstrap.min.js" />
+    <Content Include="js\dataTables\jquery.dataTables.min.js" />
+    <Content Include="js\flot-data.js" />
+    <Content Include="js\flot\excanvas.min.js" />
+    <Content Include="js\flot\jquery.colorhelpers.js" />
+    <Content Include="js\flot\jquery.flot.canvas.js" />
+    <Content Include="js\flot\jquery.flot.categories.js" />
+    <Content Include="js\flot\jquery.flot.crosshair.js" />
+    <Content Include="js\flot\jquery.flot.errorbars.js" />
+    <Content Include="js\flot\jquery.flot.fillbetween.js" />
+    <Content Include="js\flot\jquery.flot.image.js" />
+    <Content Include="js\flot\jquery.flot.js" />
+    <Content Include="js\flot\jquery.flot.navigate.js" />
+    <Content Include="js\flot\jquery.flot.pie.js" />
+    <Content Include="js\flot\jquery.flot.resize.js" />
+    <Content Include="js\flot\jquery.flot.selection.js" />
+    <Content Include="js\flot\jquery.flot.stack.js" />
+    <Content Include="js\flot\jquery.flot.symbol.js" />
+    <Content Include="js\flot\jquery.flot.threshold.js" />
+    <Content Include="js\flot\jquery.flot.time.js" />
+    <Content Include="js\flot\jquery.flot.tooltip.min.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\metisMenu.min.js" />
+    <Content Include="js\morris-data.js" />
+    <Content Include="js\morris.min.js" />
+    <Content Include="js\raphael.min.js" />
+    <Content Include="js\startmin.js" />
+    <Content Include="pages\blank.html" />
+    <Content Include="pages\buttons.html" />
+    <Content Include="pages\flot.html" />
+    <Content Include="pages\forms.html" />
+    <Content Include="pages\grid.html" />
+    <Content Include="pages\icons.html" />
+    <Content Include="pages\index.html" />
+    <Content Include="pages\login.html" />
+    <Content Include="pages\morris.html" />
+    <Content Include="pages\notifications.html" />
+    <Content Include="pages\panels-wells.html" />
+    <Content Include="pages\tables.html" />
+    <Content Include="pages\typography.html" />
+    <Content Include="TEMPLATE.html" />
+    <Content Include="WebModules\Dashboard\Dashboard.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
-    <Content Include="Registration.aspx" />
+    <Content Include="WebModules\Forms\StudentForm.aspx" />
+    <Content Include="WebModules\UserManagement\Registration.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebMethods\WebRegistration.asmx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dashboard.aspx.cs">
+    <Compile Include="WebModules\Dashboard\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Dashboard.aspx.designer.cs">
+    <Compile Include="WebModules\Dashboard\Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="DBContext\DBConnection.cs" />
@@ -107,11 +163,18 @@
       <DependentUpon>Layout.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Registration.aspx.cs">
+    <Compile Include="WebModules\Forms\StudentForm.aspx.cs">
+      <DependentUpon>StudentForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebModules\Forms\StudentForm.aspx.designer.cs">
+      <DependentUpon>StudentForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebModules\UserManagement\Registration.aspx.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Registration.aspx.designer.cs">
+    <Compile Include="WebModules\UserManagement\Registration.aspx.designer.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebMethods\WebRegistration.asmx.cs">
@@ -121,6 +184,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Contents\MasterPage\Layout.Master" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -134,7 +206,6 @@
     <Folder Include="Contents\Documents\" />
     <Folder Include="Contents\Pictures\CMS\" />
     <Folder Include="Handlers\" />
-    <Folder Include="WebModules\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

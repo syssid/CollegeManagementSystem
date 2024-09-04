@@ -13,12 +13,10 @@ namespace CollegeManagementSystem.MasterPage
 		{
 			if (Session["Username"] != null)
 			{
-				lblWelcome.Text = "Welcome, " + Session["Username"];
-				pnlLogout.Visible = true;
+			
 			}
 			else
 			{
-				pnlLogout.Visible = false;
 			}
 
 			// Ensure that caching is disabled to prevent the back button issue
@@ -46,7 +44,7 @@ namespace CollegeManagementSystem.MasterPage
 			Response.Cache.SetNoStore();
 
 			// Redirect to the login page
-			Response.Redirect("Login.aspx");
+			Response.Redirect("~/Login.aspx");
 		}
 
 	}
