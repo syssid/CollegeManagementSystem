@@ -1,13 +1,208 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Contents/MasterPage/Layout.Master" AutoEventWireup="true" CodeBehind="StudentForm.aspx.cs" Inherits="CollegeManagementSystem.WebModules.Forms.StudentForm" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <!-- /.row -->
+    <!-- /.row -->
     <div class="row">
         <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    Basic Form Elements
+                    For Office Use
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <form role="form">
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Date of Receipt</label>
+                                    <div class="col-sm-5">
+                                        <input type="date" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Course Admitted to</label>
+                                    <div class="col-sm-5">
+                                        <select class="form-control">
+                                            <option>11th</option>
+                                            <option>12th</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Accomodation</label>
+                                    <div class="col-sm-5">
+                                        <label class="checkbox-inline">
+                                            <input type="checkbox">Hostel
+                                        </label>
+                                        <label class="checkbox-inline">
+                                            <input type="checkbox">Day Scholar
+                                        </label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- /.row (nested) -->
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Personal Details
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <form role="form">
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Name of Applicant</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Father's Name</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Mother's Name</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">DOB</label>
+                                    <div class="col-sm-3">
+                                        <input type="date" class="form-control">
+                                    </div>
+                                    <label class="col-sm-2 col-form-label">Gender</label>
+                                    <div class="col-sm-3">
+                                        <label class="checkbox-inline">
+                                            <input type="checkbox">Male
+                                   
+                                        </label>
+                                        <label class="checkbox-inline">
+                                            <input type="checkbox">Female
+                                   
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Category</label>
+                                    <div class="col-sm-5">
+                                        <label class="checkbox-inline">
+                                            <input type="checkbox">OBC                                   
+                                        </label>
+                                        <label class="checkbox-inline">
+                                            <input type="checkbox">GEN                                   
+                                        </label>
+                                        <label class="checkbox-inline">
+                                            <input type="checkbox">SC                                   
+                                        </label>
+                                        <label class="checkbox-inline">
+                                            <input type="checkbox">ST                                   
+                                        </label>
+                                        <label class="checkbox-inline">
+                                            <input type="checkbox">PH                                   
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Nationality</label>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <label class="col-sm-2 col-form-label">Aadhar No.</label>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Religion</label>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <label class="col-sm-2 col-form-label">Blood Group</label>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- /.row (nested) -->
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Contact Details
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <form role="form">
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Permanent Address</label>
+                                    <div class="col-sm-8">
+                                        <textarea class="form-control" rows="3"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Present Address</label>
+                                    <div class="col-sm-8">
+                                        <textarea class="form-control" rows="3"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Father's Mob No.</label>
+                                    <div class="col-sm-5">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Mother's Mob No.</label>
+                                    <div class="col-sm-5">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Father/Mothers 's Email ID</label>
+                                    <div class="col-sm-5">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- /.row (nested) -->
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Personal Details
                 </div>
                 <div class="panel-body">
                     <div class="row">
@@ -179,7 +374,8 @@
                                 <div class="form-group input-group">
                                     <input type="text" class="form-control">
                                     <span class="input-group-btn">
-                                        <button class="btn btn-default" type="button"><i class="fa fa-search"></i>
+                                        <button class="btn btn-default" type="button">
+                                            <i class="fa fa-search"></i>
                                         </button>
                                     </span>
                                 </div>
