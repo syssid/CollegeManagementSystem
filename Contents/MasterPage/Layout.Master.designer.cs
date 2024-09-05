@@ -49,5 +49,32 @@ namespace CollegeManagementSystem.MasterPage
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
 		protected global::System.Web.UI.WebControls.Button btnLogout;
+
+		/// <summary>
+		/// HiddenFieldEmail control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.HiddenField HiddenFieldEmail;
+
+		/// <summary>
+		/// HiddenFieldName control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.HiddenField HiddenFieldName;
+
+		/// <summary>
+		/// HiddenFieldRole control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.HiddenField HiddenFieldRole;
 	}
 }

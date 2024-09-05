@@ -231,9 +231,9 @@ body {
     overflow-y: scroll;
 }
 
-.login-panel {
+/*.login-panel {
     margin-top: 25%;
-}
+}*/
 
 .flot-chart {
     display: block;

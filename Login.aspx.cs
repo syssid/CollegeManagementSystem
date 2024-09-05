@@ -31,11 +31,13 @@ namespace CollegeManagementSystem
 			DataTable dt = objLogin.ExecSPReader("CMS_SP_USER_LOGIN", param);
 			if (dt.Rows.Count > 0)
 			{
-				Session["Username"] = Email;
+
+				Session["Username"] = dt.Rows[0]["EmailID"].ToString();
+				Session["PersonName"] = dt.Rows[0]["FullName"].ToString();
+				Session["Role"] = dt.Rows[0]["Role"].ToString();
+
 				Response.Redirect("WebModules/Dashboard/Dashboard.aspx");
 			}
-			else
-				lblMessage.Text = "Invalid username or password.";
 		}
 	}
 }

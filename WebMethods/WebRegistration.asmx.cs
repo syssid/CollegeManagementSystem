@@ -28,6 +28,8 @@ namespace CollegeManagementSystem.WebMethods
 			public string Password { get; set; }
 			public string FirstName { get; set; }
 			public string LastName { get; set; }
+			public string Role { get; set; }
+			public string UserName { get; set; }
 		}
 		[WebMethod]
 		public object RegisterNewUser(Registration registration)
@@ -42,8 +44,8 @@ namespace CollegeManagementSystem.WebMethods
 			new SqlParameter("@Password",base64Password),
 			new SqlParameter("@FirstName",registration.FirstName),
 			new SqlParameter("@LastName",registration.LastName),
-			new SqlParameter("@Role","Admin"),
-			new SqlParameter("@CreatedBy","sidharthabehera@live.com"),
+			new SqlParameter("@Role",registration.Role),
+			new SqlParameter("@CreatedBy",registration.UserName)
 			};
 
 			int? result = objRegistration.ExecNonQuery("CMS_SP_USER_REGISTRATION", param);

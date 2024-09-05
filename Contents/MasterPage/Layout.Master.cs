@@ -13,11 +13,11 @@ namespace CollegeManagementSystem.MasterPage
 		{
 			if (Session["Username"] != null)
 			{
-			
+				HiddenFieldEmail.Value = Session["Username"].ToString();
+				HiddenFieldName.Value = Session["PersonName"].ToString();
+				HiddenFieldRole.Value = Session["Role"].ToString();
 			}
-			else
-			{
-			}
+
 
 			// Ensure that caching is disabled to prevent the back button issue
 			Response.Cache.SetCacheability(HttpCacheability.NoCache);

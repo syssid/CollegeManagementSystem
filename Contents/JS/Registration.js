@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-   // console.log('hello');
+
 });
 
 function RegisterUser() {
@@ -9,83 +9,98 @@ function RegisterUser() {
     const Phone = $('#txtPhone').val();
     const Password = $('#txtPassword').val();
     const ConfirmPassword = $('#txtConfirmPassword').val();
+    const Role = $('#ddlRole').val();
+    const UserName = $('.dropdown-toggle').text().trim();
 
     if (FirstName == '') {
-        swal("Name Cannot Be Blank!", "Please Enter Your First Name", "warning");
+        $('#txtAlert').show().text('Please Enter First Name');
+        alertTimeout();
         return;
     }
     if (LastName == '') {
-        swal("Name Cannot Be Blank!", "Please Enter Your Last Name", "warning");
+        $('#txtAlert').show().text('Please Enter Last Name');
+        alertTimeout();
         return;
     }
     if (EMail == '') {
-        swal("Email Cannot Be Blank!", "Please Enter Your Email", "warning");
+        $('#txtAlert').show().text('Please Enter Email');
+        alertTimeout();
         return;
     }
     if (validateEmail(EMail));
     else {
-        swal("Invalid Email!", "Please Enter A Valid Email", "warning");
+        $('#txtAlert').show().text('Please Enter A Valid Email');
+        alertTimeout();
         return;
     }
     if (Phone == '') {
-        swal("Phone Cannot Be Blank!", "Please Enter Your Phone Number", "warning");
+        $('#txtAlert').show().text('Please Enter A Phone Number');
+        alertTimeout();
         return;
     }
     if (Phone.length != 10) {
-        swal("Invalid Phone Number", "Please Enter Your 10 Digit Phone Number", "warning");
+        $('#txtAlert').show().text('Please Enter A 10 Digit Phone Number');
+        alertTimeout();
         return;
     }
 
     if (Password == '') {
-        swal("Password Cannot Be Blank!", "Please Enter A Strong Password", "warning");
+        $('#txtAlert').show().text('Please Enter A Strong Password');
+        alertTimeout();
         return;
     }
     if (ConfirmPassword == '') {
-        swal("Confirm Password Cannot Be Blank!", "Please Enter Confirm Password", "warning");
+        $('#txtAlert').show().text('Please Enter Confirm Password');
+        alertTimeout();
         return;
     }
     if (Password != ConfirmPassword) {
-        swal("Password Mismatch!", "Please Enter Same Password For Both", "warning");
+        $('#txtAlert').show().text('Please Enter Same Password For Both');
+        alertTimeout();
         return;
     }
-
+    if (Role == '0') {
+        $('#txtAlert').show().text('Please Select A Role For The Created Account');
+        alertTimeout();
+        return;
+    }
+    
     const registrationData = {  
         PhoneNumber: Phone,
         EmailID: EMail,
         Password: Password,
         FirstName: FirstName,
-        LastName: LastName
+        LastName: LastName,
+        Role: Role,
+        UserName: UserName
     };
-    $(document).ajaxSend(function () {
-        $("#overlay").show();
-        $("#overlay").fadeIn(500);
-    });
+
     $.ajax({
         type: 'POST',
-        url: 'WebMethods/WebRegistration.asmx/RegisterNewUser',
+        url: '../../WebMethods/WebRegistration.asmx/RegisterNewUser',
         data: JSON.stringify({ registration: registrationData }),
         contentType: 'application/json; charset=utf-8',
         dataType: 'json',
         success: function (response) {
             if (response.d == 1) {
-                swal("Congrasulations!", "You Have Been Successfully Registred", "success");
+                $('#txtAlert').removeClass().addClass('alert alert-success').show().text('Congrasulations!, You Have Been Successfully Registred');
+                setTimeout(function () {
+                    $('#txtAlert').fadeOut();
+                }, 5000);
+                location.reload();
                 return;
             }
             else if (response.d == -1) {
-                swal("Not Able To Register", "Already Registred.. Please Login.", "info");
+                $('#txtAlert').removeClass().addClass('alert alert-danger').show().text('This Email Is Already Registred');
+                alertTimeout();
                 return;
             }
         },
         error: function () {
-            swal("Internal Server Error!", "Please Contact To The Adminstration", "error");
-            $("#overlay").hide();
-
+            $('#txtAlert').removeClass().addClass('alert alert-danger').show().text('Internal Server Error');
+            alertTimeout();
+            return;
         }
-    }).done(function () {
-        setTimeout(function () {
-            $("#overlay").fadeOut(500);
-            $("#overlay").hide();
-        }, 1000);
     });
 
 }
@@ -96,7 +111,8 @@ function RestrictInputForNumbers(event) {
 
     if (pressedKeyInteger >= 48 && pressedKeyInteger <= 57);
     else {
-        swal("Charcters Not Allowed", "You Can Enter Only Numbers", "warning");
+        $('#txtAlert').show().text('You Can Enter Only Numbers');
+        alertTimeout();
         event.preventDefault();
         return;
     }
@@ -105,4 +121,10 @@ function RestrictInputForNumbers(event) {
 function validateEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
+}
+
+function alertTimeout() {
+    setTimeout(function () {
+        $('#txtAlert').fadeOut();
+    }, 2000);
 }

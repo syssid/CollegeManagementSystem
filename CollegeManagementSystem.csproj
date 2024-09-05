@@ -71,8 +71,8 @@
     <Content Include="Contents\CDN\CSS\bootstrap.css" />
     <Content Include="Contents\CDN\JS\bootstrap.js" />
     <Content Include="Contents\CDN\JS\jQuery.js" />
-    <Content Include="Contents\CDN\JS\SweetAlert.js" />
     <Content Include="Contents\CSS\Login.css" />
+    <Content Include="Contents\JS\Dashboard.js" />
     <Content Include="Contents\JS\Registration.js" />
     <Content Include="css\bootstrap-social.css" />
     <Content Include="css\bootstrap-theme.min.css" />
@@ -86,7 +86,6 @@
     <Content Include="css\timeline.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="index.html" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\dataTables\dataTables.bootstrap.min.js" />
     <Content Include="js\dataTables\jquery.dataTables.min.js" />
@@ -115,27 +114,13 @@
     <Content Include="js\morris.min.js" />
     <Content Include="js\raphael.min.js" />
     <Content Include="js\startmin.js" />
-    <Content Include="pages\blank.html" />
-    <Content Include="pages\buttons.html" />
-    <Content Include="pages\flot.html" />
-    <Content Include="pages\forms.html" />
-    <Content Include="pages\grid.html" />
-    <Content Include="pages\icons.html" />
-    <Content Include="pages\index.html" />
-    <Content Include="pages\login.html" />
-    <Content Include="pages\morris.html" />
-    <Content Include="pages\notifications.html" />
-    <Content Include="pages\panels-wells.html" />
-    <Content Include="pages\tables.html" />
-    <Content Include="pages\typography.html" />
-    <Content Include="TEMPLATE.html" />
     <Content Include="WebModules\Dashboard\Dashboard.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
     <Content Include="WebModules\Forms\StudentForm.aspx" />
-    <Content Include="WebModules\UserManagement\Registration.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebMethods\WebRegistration.asmx" />
+    <Content Include="WebModules\UserManagement\UserRegistration.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="WebModules\Dashboard\Dashboard.aspx.cs">
@@ -171,16 +156,16 @@
     <Compile Include="WebModules\Forms\StudentForm.aspx.designer.cs">
       <DependentUpon>StudentForm.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebModules\UserManagement\Registration.aspx.cs">
-      <DependentUpon>Registration.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebModules\UserManagement\Registration.aspx.designer.cs">
-      <DependentUpon>Registration.aspx</DependentUpon>
-    </Compile>
     <Compile Include="WebMethods\WebRegistration.asmx.cs">
       <DependentUpon>WebRegistration.asmx</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebModules\UserManagement\UserRegistration.aspx.cs">
+      <DependentUpon>UserRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebModules\UserManagement\UserRegistration.aspx.designer.cs">
+      <DependentUpon>UserRegistration.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -206,7 +191,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Contents\Documents\" />
     <Folder Include="Contents\Pictures\CMS\" />
-    <Folder Include="Handlers\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
