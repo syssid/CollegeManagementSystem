@@ -1,37 +1,20 @@
 ﻿using CollegeManagementSystem.DBContext;
+using CollegeManagementSystem.Models;
 using System;
 using System.Collections.Generic;
-using System.Data.Common;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Web;
-using System.Web.Services;
+using System.Net;
+using System.Net.Http;
+using System.Web.Http;
 
-namespace CollegeManagementSystem.WebMethods
+namespace CollegeManagementSystem.Controllers
 {
-	/// <summary>
-	/// Summary description for WebRegistration
-	/// </summary>
-	[WebService(Namespace = "http://tempuri.org/")]
-	[WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
-	[System.ComponentModel.ToolboxItem(false)]
-	// To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
-	[System.Web.Script.Services.ScriptService]
-
-	public class WebRegistration : System.Web.Services.WebService
-	{
+    public class UserManagementController : ApiController
+    {
 		DBConnection objRegistration = new DBConnection();
-		public struct Registration
-		{
-			public string PhoneNumber { get; set; }
-			public string EmailID { get; set; }
-			public string Password { get; set; }
-			public string FirstName { get; set; }
-			public string LastName { get; set; }
-			public string Role { get; set; }
-			public string UserName { get; set; }
-		}
-		[WebMethod]
+		[HttpPost]
+		[Route("api/UserManagement/RegisterNewUser")]
 		public int RegisterNewUser(Registration registration)
 		{
 			byte[] passwordBytes = System.Text.Encoding.UTF8.GetBytes(registration.Password);
@@ -49,7 +32,7 @@ namespace CollegeManagementSystem.WebMethods
 			};
 
 			int result = objRegistration.ExecNonQuery("CMS_SP_USER_REGISTRATION", param);
-			
+
 			return result;
 		}
 	}

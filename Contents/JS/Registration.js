@@ -77,12 +77,13 @@ function RegisterUser() {
 
     $.ajax({
         type: 'POST',
-        url: '../../WebMethods/WebRegistration.asmx/RegisterNewUser',
-        data: JSON.stringify({ registration: registrationData }),
+        url: '/api/UserManagement/RegisterNewUser',
+        data: JSON.stringify(registrationData),
         contentType: 'application/json; charset=utf-8',
         dataType: 'json',
         success: function (response) {
-            if (response.d == 1) {
+            debugger;
+            if (response == 1) {
                 $('#txtAlert').removeClass().addClass('alert alert-success').show().text('Congrasulations!, You Have Been Successfully Registred');
                 setTimeout(function () {
                     $('#txtAlert').fadeOut();
@@ -90,7 +91,7 @@ function RegisterUser() {
                 location.reload();
                 return;
             }
-            else if (response.d == -1) {
+            else if (response == -1) {
                 $('#txtAlert').removeClass().addClass('alert alert-danger').show().text('This Email Is Already Registred');
                 alertTimeout();
                 return;
