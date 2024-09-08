@@ -151,7 +151,6 @@
     <Content Include="Login.aspx" />
     <Content Include="WebModules\Forms\StudentForm.aspx" />
     <Content Include="Web.config" />
-    <Content Include="WebMethods\WebRegistration.asmx" />
     <Content Include="WebModules\UserManagement\UserRegistration.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -189,10 +188,6 @@
     </Compile>
     <Compile Include="WebModules\Forms\StudentForm.aspx.designer.cs">
       <DependentUpon>StudentForm.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebMethods\WebRegistration.asmx.cs">
-      <DependentUpon>WebRegistration.asmx</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="WebModules\UserManagement\UserRegistration.aspx.cs">
       <DependentUpon>UserRegistration.aspx</DependentUpon>
