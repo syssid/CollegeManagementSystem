@@ -36,7 +36,7 @@ namespace CollegeManagementSystem
 				Session["PersonName"] = dt.Rows[0]["FullName"].ToString();
 				Session["Role"] = dt.Rows[0]["Role"].ToString();
 
-				Response.Redirect("WebModules/Dashboard/Dashboard.aspx");
+				Response.Redirect("~/WebModules/Dashboard/Dashboard.aspx");
 			}
 		}
 	}

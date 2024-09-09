@@ -11,8 +11,7 @@
     <meta name="author" content="" />
 
     <title>Welcome Please Login</title>
-        <script src="../js/jquery.min.js"></script>
-
+    <script src="../js/jquery.min.js"></script>
     <script src="../js/startmin.js"></script>
 
 
@@ -40,7 +39,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-md-offset-4">
-                    <div style="margin-top:25%" class="login-panel panel panel-default">
+                    <div style="margin-top: 25%" class="login-panel panel panel-default">
                         <div class="panel-heading">
                             <h3 class="panel-title">Please Sign In</h3>
                         </div>

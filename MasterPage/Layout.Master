@@ -11,29 +11,17 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <!-- jQuery -->
-    <script src="../../js/jquery.min.js"></script>
+    <script src="../../JS/jquery.min.js"></script>
+    <script src="../../JS/bootstrap.min.js"></script>
+    <script src="../../JS/metisMenu.min.js"></script>
+     <script src="../../JS/startmin.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../../js/bootstrap.min.js"></script>
-
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="../../js/metisMenu.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="../../js/startmin.js"></script>
-    <!-- Bootstrap Core CSS -->
-    <link href="../../css/bootstrap.min.css" rel="stylesheet">
-    <!-- MetisMenu CSS -->
-    <link href="../../css/metisMenu.min.css" rel="stylesheet">
-    <!-- Timeline CSS -->
-    <link href="../../css/timeline.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="../../css/startmin.css" rel="stylesheet">
-    <!-- Morris Charts CSS -->
-    <link href="../../css/morris.css" rel="stylesheet">
-    <!-- Custom Fonts -->
-    <link href="../../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../CSS/bootstrap.min.css" rel="stylesheet">
+    <link href="../CSS/metisMenu.min.css" rel="stylesheet">
+    <link href="../CSS/timeline.css" rel="stylesheet">
+    <link href="../CSS/startmin.css" rel="stylesheet">
+    <link href="../CSS/morris.css" rel="stylesheet">
+    <link href="../CSS/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>

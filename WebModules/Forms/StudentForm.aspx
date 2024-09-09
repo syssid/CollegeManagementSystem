@@ -1,6 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Contents/MasterPage/Layout.Master" AutoEventWireup="true" CodeBehind="StudentForm.aspx.cs" Inherits="CollegeManagementSystem.WebModules.Forms.StudentForm" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/Layout.Master" AutoEventWireup="true" CodeBehind="StudentForm.aspx.cs" Inherits="CollegeManagementSystem.WebModules.Forms.StudentForm" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <script src="../../Scripts/StudentForm.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="row">
@@ -18,7 +19,6 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-lg-12">
-                            <form role="form">
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label">Date of Receipt</label>
                                     <div class="col-sm-5">
@@ -45,7 +45,6 @@
                                         </label>
                                     </div>
                                 </div>
-                            </form>
                         </div>
                     </div>
                     <!-- /.row (nested) -->
@@ -65,7 +64,6 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-lg-12">
-                            <form role="form">
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label">Name of Applicant</label>
                                     <div class="col-sm-8">
@@ -141,7 +139,6 @@
                                         <input type="text" class="form-control">
                                     </div>
                                 </div>
-                            </form>
                         </div>
                     </div>
                     <!-- /.row (nested) -->
@@ -161,7 +158,6 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-lg-12">
-                            <form role="form">
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label">Permanent Address</label>
                                     <div class="col-sm-8">
@@ -192,7 +188,6 @@
                                         <input type="text" class="form-control">
                                     </div>
                                 </div>
-                            </form>
                         </div>
                     </div>
                     <!-- /.row (nested) -->
@@ -212,7 +207,6 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-lg-6">
-                            <form role="form">
                                 <div class="form-group">
                                     <label>Text Input</label>
                                     <input class="form-control">
@@ -316,12 +310,10 @@
                                 </div>
                                 <button type="submit" class="btn btn-default">Submit Button</button>
                                 <button type="reset" class="btn btn-default">Reset Button</button>
-                            </form>
                         </div>
                         <!-- /.col-lg-6 (nested) -->
                         <div class="col-lg-6">
                             <h1>Disabled Form States</h1>
-                            <form role="form">
                                 <fieldset disabled>
                                     <div class="form-group">
                                         <label for="disabledSelect">Disabled input</label>
@@ -340,9 +332,7 @@
                                     </div>
                                     <button type="submit" class="btn btn-primary">Disabled Button</button>
                                 </fieldset>
-                            </form>
                             <h1>Form Validation States</h1>
-                            <form role="form">
                                 <div class="form-group has-success">
                                     <label class="control-label" for="inputSuccess">Input with success</label>
                                     <input type="text" class="form-control" id="inputSuccess">
@@ -355,9 +345,7 @@
                                     <label class="control-label" for="inputError">Input with error</label>
                                     <input type="text" class="form-control" id="inputError">
                                 </div>
-                            </form>
                             <h1>Input Groups</h1>
-                            <form role="form">
                                 <div class="form-group input-group">
                                     <span class="input-group-addon">@</span>
                                     <input type="text" class="form-control" placeholder="Username">
@@ -384,7 +372,6 @@
                                         </button>
                                     </span>
                                 </div>
-                            </form>
                         </div>
                         <!-- /.col-lg-6 (nested) -->
                     </div>

@@ -1,7 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Contents/MasterPage/Layout.Master" AutoEventWireup="true" CodeBehind="UserRegistration.aspx.cs" Inherits="CollegeManagementSystem.WebModules.UserManagement.UserRegistration" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/Layout.Master" AutoEventWireup="true" CodeBehind="UserRegistration.aspx.cs" Inherits="CollegeManagementSystem.WebModules.UserManagement.UserRegistration" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <script src="../../Contents/JS/Registration.js?V=<%=DateTime.Now%>"></script>
+    <script src="../../Scripts/Registration.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="row">

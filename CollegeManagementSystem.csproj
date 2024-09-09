@@ -100,52 +100,49 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Contents\CDN\CSS\bootstrap.css" />
-    <Content Include="Contents\CDN\JS\bootstrap.js" />
-    <Content Include="Contents\CDN\JS\jQuery.js" />
-    <Content Include="Contents\CSS\Login.css" />
-    <Content Include="Contents\JS\Dashboard.js" />
-    <Content Include="Contents\JS\Registration.js" />
-    <Content Include="css\bootstrap-social.css" />
-    <Content Include="css\bootstrap-theme.min.css" />
-    <Content Include="css\bootstrap.min.css" />
-    <Content Include="css\dataTables\dataTables.bootstrap.css" />
-    <Content Include="css\dataTables\dataTables.responsive.css" />
-    <Content Include="css\font-awesome.min.css" />
-    <Content Include="css\metisMenu.min.css" />
-    <Content Include="css\morris.css" />
-    <Content Include="css\startmin.css" />
-    <Content Include="css\timeline.css" />
-    <Content Include="fonts\fontawesome-webfont.svg" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="js\bootstrap.min.js" />
-    <Content Include="js\dataTables\dataTables.bootstrap.min.js" />
-    <Content Include="js\dataTables\jquery.dataTables.min.js" />
-    <Content Include="js\flot-data.js" />
-    <Content Include="js\flot\excanvas.min.js" />
-    <Content Include="js\flot\jquery.colorhelpers.js" />
-    <Content Include="js\flot\jquery.flot.canvas.js" />
-    <Content Include="js\flot\jquery.flot.categories.js" />
-    <Content Include="js\flot\jquery.flot.crosshair.js" />
-    <Content Include="js\flot\jquery.flot.errorbars.js" />
-    <Content Include="js\flot\jquery.flot.fillbetween.js" />
-    <Content Include="js\flot\jquery.flot.image.js" />
-    <Content Include="js\flot\jquery.flot.js" />
-    <Content Include="js\flot\jquery.flot.navigate.js" />
-    <Content Include="js\flot\jquery.flot.pie.js" />
-    <Content Include="js\flot\jquery.flot.resize.js" />
-    <Content Include="js\flot\jquery.flot.selection.js" />
-    <Content Include="js\flot\jquery.flot.stack.js" />
-    <Content Include="js\flot\jquery.flot.symbol.js" />
-    <Content Include="js\flot\jquery.flot.threshold.js" />
-    <Content Include="js\flot\jquery.flot.time.js" />
-    <Content Include="js\flot\jquery.flot.tooltip.min.js" />
-    <Content Include="js\jquery.min.js" />
-    <Content Include="js\metisMenu.min.js" />
-    <Content Include="js\morris-data.js" />
-    <Content Include="js\morris.min.js" />
-    <Content Include="js\raphael.min.js" />
-    <Content Include="js\startmin.js" />
+    <Content Include="Scripts\Dashboard.js" />
+    <Content Include="Scripts\Registration.js" />
+    <Content Include="CSS\bootstrap-social.css" />
+    <Content Include="CSS\bootstrap-theme.min.css" />
+    <Content Include="CSS\bootstrap.min.css" />
+    <Content Include="CSS\dataTables\dataTables.bootstrap.css" />
+    <Content Include="CSS\dataTables\dataTables.responsive.css" />
+    <Content Include="CSS\font-awesome.min.css" />
+    <Content Include="CSS\metisMenu.min.css" />
+    <Content Include="CSS\morris.css" />
+    <Content Include="CSS\startmin.css" />
+    <Content Include="CSS\timeline.css" />
+    <Content Include="Fonts\fontawesome-webfont.svg" />
+    <Content Include="Fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="JS\bootstrap.min.js" />
+    <Content Include="JS\dataTables\dataTables.bootstrap.min.js" />
+    <Content Include="JS\dataTables\jquery.dataTables.min.js" />
+    <Content Include="JS\flot-data.js" />
+    <Content Include="JS\flot\excanvas.min.js" />
+    <Content Include="JS\flot\jquery.colorhelpers.js" />
+    <Content Include="JS\flot\jquery.flot.canvas.js" />
+    <Content Include="JS\flot\jquery.flot.categories.js" />
+    <Content Include="JS\flot\jquery.flot.crosshair.js" />
+    <Content Include="JS\flot\jquery.flot.errorbars.js" />
+    <Content Include="JS\flot\jquery.flot.fillbetween.js" />
+    <Content Include="JS\flot\jquery.flot.image.js" />
+    <Content Include="JS\flot\jquery.flot.js" />
+    <Content Include="JS\flot\jquery.flot.navigate.js" />
+    <Content Include="JS\flot\jquery.flot.pie.js" />
+    <Content Include="JS\flot\jquery.flot.resize.js" />
+    <Content Include="JS\flot\jquery.flot.selection.js" />
+    <Content Include="JS\flot\jquery.flot.stack.js" />
+    <Content Include="JS\flot\jquery.flot.symbol.js" />
+    <Content Include="JS\flot\jquery.flot.threshold.js" />
+    <Content Include="JS\flot\jquery.flot.time.js" />
+    <Content Include="JS\flot\jquery.flot.tooltip.min.js" />
+    <Content Include="JS\jquery.min.js" />
+    <Content Include="JS\metisMenu.min.js" />
+    <Content Include="JS\morris-data.js" />
+    <Content Include="JS\morris.min.js" />
+    <Content Include="JS\raphael.min.js" />
+    <Content Include="JS\startmin.js" />
+    <Content Include="Scripts\StudentForm.js" />
     <Content Include="WebModules\Dashboard\Dashboard.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
@@ -174,11 +171,11 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Contents\MasterPage\Layout.Master.cs">
+    <Compile Include="MasterPage\Layout.Master.cs">
       <DependentUpon>Layout.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Contents\MasterPage\Layout.Master.designer.cs">
+    <Compile Include="MasterPage\Layout.Master.designer.cs">
       <DependentUpon>Layout.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -198,16 +195,16 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Contents\MasterPage\Layout.Master" />
-    <Content Include="fonts\fontawesome-webfont.eot" />
-    <Content Include="fonts\fontawesome-webfont.ttf" />
-    <Content Include="fonts\fontawesome-webfont.woff" />
-    <Content Include="fonts\fontawesome-webfont.woff2" />
-    <Content Include="fonts\FontAwesome.otf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="MasterPage\Layout.Master" />
+    <Content Include="Fonts\fontawesome-webfont.eot" />
+    <Content Include="Fonts\fontawesome-webfont.ttf" />
+    <Content Include="Fonts\fontawesome-webfont.woff" />
+    <Content Include="Fonts\fontawesome-webfont.woff2" />
+    <Content Include="Fonts\FontAwesome.otf" />
+    <Content Include="Fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Fonts\glyphicons-halflings-regular.woff2" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -216,11 +213,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="Contents\Documents\" />
-    <Folder Include="Contents\Pictures\CMS\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
