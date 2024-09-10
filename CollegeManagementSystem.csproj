@@ -143,11 +143,13 @@
     <Content Include="JS\raphael.min.js" />
     <Content Include="JS\startmin.js" />
     <Content Include="Scripts\StudentForm.js" />
+    <Content Include="Scripts\UserDelete.js" />
     <Content Include="WebModules\Dashboard\Dashboard.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
     <Content Include="WebModules\Forms\StudentForm.aspx" />
     <Content Include="Web.config" />
+    <Content Include="WebModules\UserManagement\UserDelete.aspx" />
     <Content Include="WebModules\UserManagement\UserRegistration.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -185,6 +187,13 @@
     </Compile>
     <Compile Include="WebModules\Forms\StudentForm.aspx.designer.cs">
       <DependentUpon>StudentForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebModules\UserManagement\UserDelete.aspx.cs">
+      <DependentUpon>UserDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebModules\UserManagement\UserDelete.aspx.designer.cs">
+      <DependentUpon>UserDelete.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebModules\UserManagement\UserRegistration.aspx.cs">
       <DependentUpon>UserRegistration.aspx</DependentUpon>

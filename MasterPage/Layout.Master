@@ -14,7 +14,9 @@
     <script src="../../JS/jquery.min.js"></script>
     <script src="../../JS/bootstrap.min.js"></script>
     <script src="../../JS/metisMenu.min.js"></script>
-     <script src="../../JS/startmin.js"></script>
+    <script src="../../JS/startmin.js"></script>
+    <script src="../../JS/dataTables/jquery.dataTables.min.js"></script>
+    <script src="../../JS/dataTables/dataTables.bootstrap.min.js"></script>
 
     <link href="../CSS/bootstrap.min.css" rel="stylesheet">
     <link href="../CSS/metisMenu.min.css" rel="stylesheet">
@@ -22,6 +24,8 @@
     <link href="../CSS/startmin.css" rel="stylesheet">
     <link href="../CSS/morris.css" rel="stylesheet">
     <link href="../CSS/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../CSS/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="../CSS/dataTables/dataTables.responsive.css" rel="stylesheet">
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -100,7 +104,10 @@
                             <a href="#"><i class="fa fa-wrench fa-fw"></i>User Management<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="../../WebModules/UserManagement/UserRegistration.aspx">Create login</a>
+                                    <a href="../../WebModules/UserManagement/UserRegistration.aspx">Create Login</a>
+                                </li>
+                                <li>
+                                    <a href="../../WebModules/UserManagement/UserDelete.aspx">Delete Account</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
