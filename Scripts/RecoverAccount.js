@@ -2,10 +2,10 @@
     var table = $('#dataTables-example').DataTable({
         responsive: true
     });
-    const registrationData = {
-        Status:1
-    }
 
+    const registrationData = {
+        Status: 0
+    }
     $.ajax({
         type: 'POST',
         url: '/api/UserManagement/ShowUserForManage',
@@ -36,7 +36,7 @@
                         + '<td>' + this.Status + '</td>'
                         + '<td>' + this.CreatedOn + '</td>'
                         + '<td>' + this.CreatedBy + '</td>'
-                        + '<td><button type="button" class="btn btn-danger" onclick="DisableAccount(\'' + this.MasterID + '\');">Disable</button></td>'
+                        + '<td><button type="button" class="btn btn-success" onclick="EnableAccount(\'' + this.MasterID + '\');">Enable</button></td>'
                         + '</tr>');
                 });
 
@@ -52,16 +52,15 @@
 
 });
 
-function DisableAccount(MasterID) {
+function EnableAccount(MasterID) {
     debugger;
-    var con = confirm('Are you sure want to Delete ?');
+    var con = confirm('Are you sure want to Enable ?');
     if (con == false)
         return;
     else {
         const registrationData = {
             MasterID: MasterID,
-            Status:0
-
+            Status:1
         };
         $.ajax({
             type: 'POST',
@@ -71,14 +70,14 @@ function DisableAccount(MasterID) {
             dataType: 'json',
             success: function (response) {
                 if (response == 1) {
-                    alert('User Deleted Successfully');
+                    alert('User Recovered Successfully');
                     location.reload();
                 }
                 else if (response == -1) {
-                    alert('Failed To Deleted User');
+                    alert('Failed To Recover User');
                     location.reload();
                     return;
-                }                
+                }
             },
             error: function () {
                 alert('Error encountered');

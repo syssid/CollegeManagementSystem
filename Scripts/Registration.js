@@ -1,7 +1,6 @@
 ﻿$(document).ready(function () {
 
 });
-
 function RegisterUser() {
     const FirstName = $('#txtFirstName').val();
     const LastName = $('#txtLastName').val();
@@ -13,55 +12,45 @@ function RegisterUser() {
     const UserName = $('.dropdown-toggle').text().trim();
 
     if (FirstName == '') {
-        $('#txtAlert').show().text('Please Enter First Name');
-        alertTimeout();
+        alert('Please Enter First Name');
         return;
     }
     if (LastName == '') {
-        $('#txtAlert').show().text('Please Enter Last Name');
-        alertTimeout();
-        return;
+       alert('Please Enter Last Name');
+       return;
     }
     if (EMail == '') {
-        $('#txtAlert').show().text('Please Enter Email');
-        alertTimeout();
+        alert('Please Enter Email');
         return;
     }
     if (validateEmail(EMail));
     else {
-        $('#txtAlert').show().text('Please Enter A Valid Email');
-        alertTimeout();
+        alert('Please Enter A Valid Email');
         return;
     }
     if (Phone == '') {
-        $('#txtAlert').show().text('Please Enter A Phone Number');
-        alertTimeout();
+        alert('Please Enter A Phone Number');
         return;
     }
     if (Phone.length != 10) {
-        $('#txtAlert').show().text('Please Enter A 10 Digit Phone Number');
-        alertTimeout();
+        alert('Please Enter A 10 Digit Phone Number');
         return;
     }
 
     if (Password == '') {
-        $('#txtAlert').show().text('Please Enter A Strong Password');
-        alertTimeout();
+        alert('Please Enter A Strong Password');
         return;
     }
     if (ConfirmPassword == '') {
-        $('#txtAlert').show().text('Please Enter Confirm Password');
-        alertTimeout();
+        alert('Please Enter Confirm Password');
         return;
     }
     if (Password != ConfirmPassword) {
-        $('#txtAlert').show().text('Please Enter Same Password For Both');
-        alertTimeout();
+        alert('Please Enter Same Password For Both');
         return;
     }
     if (Role == '0') {
-        $('#txtAlert').show().text('Please Select A Role For The Created Account');
-        alertTimeout();
+        alert('Please Select A Role For The Created Account');
         return;
     }
     
@@ -84,23 +73,15 @@ function RegisterUser() {
         success: function (response) {
             debugger;
             if (response == 1) {
-                $('#txtAlert').removeClass().addClass('alert alert-success').show().text('Congrasulations!, You Have Been Successfully Registred');
-                setTimeout(function () {
-                    $('#txtAlert').fadeOut();
-                }, 5000);
+                alert('Congrasulations!, You Have Been Successfully Registred');    
                 location.reload();
-                return;
             }
             else if (response == -1) {
-                $('#txtAlert').removeClass().addClass('alert alert-danger').show().text('This Email Is Already Registred');
-                alertTimeout();
-                return;
+                alert('This Email Is Already Registred');
             }
         },
         error: function () {
-            $('#txtAlert').removeClass().addClass('alert alert-danger').show().text('Internal Server Error');
-            alertTimeout();
-            return;
+           alert('Internal Server Error');
         }
     });
 
@@ -112,8 +93,7 @@ function RestrictInputForNumbers(event) {
 
     if (pressedKeyInteger >= 48 && pressedKeyInteger <= 57);
     else {
-        $('#txtAlert').show().text('You Can Enter Only Numbers');
-        alertTimeout();
+        alert('You Can Enter Only Numbers');
         event.preventDefault();
         return;
     }
@@ -122,10 +102,4 @@ function RestrictInputForNumbers(event) {
 function validateEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
-}
-
-function alertTimeout() {
-    setTimeout(function () {
-        $('#txtAlert').fadeOut();
-    }, 2000);
 }

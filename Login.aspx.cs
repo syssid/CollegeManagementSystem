@@ -11,33 +11,38 @@ using CollegeManagementSystem.DBContext;
 
 namespace CollegeManagementSystem
 {
-	public partial class Login : System.Web.UI.Page
-	{
-		DBConnection objLogin = new DBConnection();
-		protected void btnLogin_Click(object sender, EventArgs e)
-		{
-			string Email = txtEmail.Text.Trim();
-			string Password = txtPassword.Text.Trim();
+    public partial class Login : System.Web.UI.Page
+    {
+        DBConnection objLogin = new DBConnection();
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+            string Email = txtEmail.Text.Trim();
+            string Password = txtPassword.Text.Trim();
 
-			byte[] passwordBytes = System.Text.Encoding.UTF8.GetBytes(Password);
-			string base64Password = Convert.ToBase64String(passwordBytes);
+            byte[] passwordBytes = System.Text.Encoding.UTF8.GetBytes(Password);
+            string base64Password = Convert.ToBase64String(passwordBytes);
 
-			SqlParameter[] param = new SqlParameter[]
-			{
-			new SqlParameter("@EmailID",Email),
-			new SqlParameter("@Password",base64Password)
-			};
+            SqlParameter[] param = new SqlParameter[]
+            {
+            new SqlParameter("@EmailID",Email),
+            new SqlParameter("@Password",base64Password)
+            };
 
-			DataTable dt = objLogin.ExecSPReader("CMS_SP_USER_LOGIN", param);
-			if (dt.Rows.Count > 0)
-			{
+            DataTable dt = objLogin.ExecSPReader("CMS_SP_USER_LOGIN", param);
+            if (dt.Rows.Count > 0)
+            {
 
-				Session["Username"] = dt.Rows[0]["EmailID"].ToString();
-				Session["PersonName"] = dt.Rows[0]["FullName"].ToString();
-				Session["Role"] = dt.Rows[0]["Role"].ToString();
+                Session["Username"] = dt.Rows[0]["EmailID"].ToString();
+                Session["PersonName"] = dt.Rows[0]["FullName"].ToString();
+                Session["Role"] = dt.Rows[0]["Role"].ToString();
 
-				Response.Redirect("~/WebModules/Dashboard/Dashboard.aspx");
-			}
-		}
-	}
+                Response.Redirect("~/WebModules/Dashboard/Dashboard.aspx");
+            }
+            else
+            {
+                lblMessage.Text = "Invalid username or password.";
+
+            }
+        }
+    }
 }

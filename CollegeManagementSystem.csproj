@@ -101,6 +101,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\Dashboard.js" />
+    <Content Include="Scripts\RecoverAccount.js" />
     <Content Include="Scripts\Registration.js" />
     <Content Include="CSS\bootstrap-social.css" />
     <Content Include="CSS\bootstrap-theme.min.css" />
@@ -149,6 +150,7 @@
     <Content Include="Login.aspx" />
     <Content Include="WebModules\Forms\StudentForm.aspx" />
     <Content Include="Web.config" />
+    <Content Include="WebModules\UserManagement\RecoverAccount.aspx" />
     <Content Include="WebModules\UserManagement\UserDelete.aspx" />
     <Content Include="WebModules\UserManagement\UserRegistration.aspx" />
   </ItemGroup>
@@ -187,6 +189,13 @@
     </Compile>
     <Compile Include="WebModules\Forms\StudentForm.aspx.designer.cs">
       <DependentUpon>StudentForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebModules\UserManagement\RecoverAccount.aspx.cs">
+      <DependentUpon>RecoverAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebModules\UserManagement\RecoverAccount.aspx.designer.cs">
+      <DependentUpon>RecoverAccount.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebModules\UserManagement\UserDelete.aspx.cs">
       <DependentUpon>UserDelete.aspx</DependentUpon>

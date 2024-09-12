@@ -41,31 +41,31 @@
                 <div class="col-md-4 col-md-offset-4">
                     <div style="margin-top: 25%" class="login-panel panel panel-default">
                         <div class="panel-heading">
-                            <h3 class="panel-title">Please Sign In</h3>
+                            <asp:Label ID="lblMessage" runat="server" ForeColor="Red">Login to Continue</asp:Label>
                         </div>
-                        <div class="panel-body">
-                            <fieldset>
-                                <div class="form-group">
-                                    <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control"
-                                        Placeholder="E-mail" TextMode="Email" AutoFocus="true" />
-                                </div>
-                                <div class="form-group">
-                                    <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control"
-                                        Placeholder="Password" TextMode="Password" />
-                                </div>
-                                <div class="checkbox">
-                                    <label>
-                                        <input name="remember" type="checkbox" value="Remember Me" />Remember Me
-                                    </label>
-                                </div>
-                                <!-- Change this to a button or input when using this as a form -->
-                                <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click"
-                                    CssClass="btn btn-lg btn-success btn-block" />
-                            </fieldset>
-                        </div>
+                    <div class="panel-body">
+                        <fieldset>
+                            <div class="form-group">
+                                <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control"
+                                    Placeholder="E-mail" TextMode="Email" AutoFocus="true" />
+                            </div>
+                            <div class="form-group">
+                                <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control"
+                                    Placeholder="Password" TextMode="Password" />
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input name="remember" type="checkbox" value="Remember Me" />Remember Me
+                                </label>
+                            </div>
+                            <!-- Change this to a button or input when using this as a form -->
+                            <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click"
+                                CssClass="btn btn-lg btn-success btn-block" />
+                        </fieldset>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </form>
 </body>

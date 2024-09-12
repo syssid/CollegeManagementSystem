@@ -26,7 +26,14 @@
     <link href="../CSS/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="../CSS/dataTables/dataTables.bootstrap.css" rel="stylesheet">
     <link href="../CSS/dataTables/dataTables.responsive.css" rel="stylesheet">
-
+    <script>
+        $(document).ready(function () {
+            const Role = $('#txtRole').text();
+            if (Role == 'Employee') {
+                $('#SecUserManage').hide();
+            }
+        });
+    </script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -107,7 +114,10 @@
                                     <a href="../../WebModules/UserManagement/UserRegistration.aspx">Create Login</a>
                                 </li>
                                 <li>
-                                    <a href="../../WebModules/UserManagement/UserDelete.aspx">Delete Account</a>
+                                    <a href="../../WebModules/UserManagement/UserDelete.aspx">Disable Account</a>
+                                </li>
+                                <li>
+                                    <a href="../../WebModules/UserManagement/RecoverAccount.aspx">Recover Account</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->

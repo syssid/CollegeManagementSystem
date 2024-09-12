@@ -5,8 +5,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="row">
-        <div class="col-lg-12">
-            <h1 class="page-header">Create New Login</h1>
+        <div class="col-lg-12" >
+            <h1 class="page-header" style="font-size: 20px">Create New Login</h1>
         </div>
     </div>
     <div class="container">
@@ -14,7 +14,7 @@
             <div class="col-md-4 col-md-offset-4">
                 <div class="login-panel panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title" style="text-align: center">Only Developer Can Create A Super Admin</h3>
+                        <h3 class="panel-title" style="text-align: center">Register A New Account</h3>
                     </div>
                     <div class="panel-body">
                         <fieldset>
@@ -39,14 +39,13 @@
                             <div class="form-group">
                                 <select class="form-control" id="ddlRole">
                                     <option value="0">Please Select</option>
-                                    <option value="SuperAdmin">Super Admin</option>
                                     <option value="Admin">Admin</option>
+                                    <option value="Employee">Employee</option>
                                 </select>
                             </div>
                             <!-- Change this to a button or input when using this as a form -->
                             <button type="button" href="index.html" class="btn btn-lg btn-success btn-block" onclick="RegisterUser();">Create Account</button>
-                            <div class="alert alert-danger" id="txtAlert" style="display:none; margin-top: 10px;">
-                            </div>
+                            
                         </fieldset>
                     </div>
                 </div>
